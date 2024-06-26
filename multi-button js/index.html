@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: aqua;
+            height: 650px;
+            width: 80vw;
+            margin: 0px auto;
+            margin-top: 30px;
+        }
+
+        .two-box {
+            height: 250px;
+            background-color: rgb(200, 37, 37);
+
+        }
+
+        input {
+            margin-top: 70px;
+            margin-left: 300px;
+            height: 30px;
+        }
+
+        .buttons {
+            height: 200px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        button {
+            height: 30px;
+            width: 120px;
+            margin-top: 70px;
+        }
+
+        .two-divs {
+            height: 400px;
+            background-color: rgb(200, 37, 37);
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .div1 {
+            height: 250px;
+            width: 320px;
+            background-color: aliceblue;
+            margin-top: 60px;
+        }
+
+        .div2 {
+            height: 250px;
+            width: 320px;
+            background-color: aliceblue;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="two-box">
+            <input id="input1" type="text">
+            <input id="input2" type="text">
+        </div>
+        <div class="buttons">
+            <button id="btn-1" onclick="copyText()">Button1</button>
+            <button id="btn-2" onclick="textAlert()">Alert</button>
+            <button id="btn-3" onclick="copyDiv2()">Button3</button>
+            <button id="btn-4" onclick="copyDiv1()">Button4</button>
+            <button id="btn5" onclick="changeImg()">Button5</button>
+        </div>
+        <div class="two-divs">
+            <div id="div1" class="div1">
+                HELLO
+            </div>
+            <div id="div2" class="div2">
+                BYE
+            </div>
+        </div>
+    </div>
+    <script>
+        function copyText() {
+            var a = document.getElementById("input1").value
+               console.log(a)
+               document.getElementById("input2").value=a
+         }
+         function textAlert(){
+            var a = document.getElementById("input1").value
+            alert(a)
+        alert("hello");
+        alert("bye")
+         }
+         function copyDiv2(){
+            var a = document.getElementById("input1").value
+          document.getElementById("div2").innerText=a
+
+         }
+         function copyDiv1(){
+            var a = document.getElementById("input1").value
+          document.getElementById("div1").innerText="hello"+a
+
+         }
+         function changeImg(){
+         document.getElementById("input1").type="radio"
+         document.getElementById("input2").type="checkbox"
+          document.getElementById("div2").style.backgroundImage="url(rainbow.jpg)"
+
+         }
+
+    </script>
+</body>
+
+</html>

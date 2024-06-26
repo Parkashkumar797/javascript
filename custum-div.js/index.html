@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom div</title>
+</head>
+<body>
+    <label for="">height</label>
+    <input id="inp1" type="text">
+    <br>
+    <br>
+    <label for="">width</label>
+    <input id="inp2" type="number">
+    <br>
+    <br>
+    <label for="">text</label>
+    <input id="inp3" type="text">
+    <br>
+    <br>
+    <label for="">Text Color</label>
+    <input id="inp4" type="color">
+    <br>
+    <br>
+    <label for="">Background-color</label>
+    <input id="inp5" type="color">
+    <br>
+    <button id="btn1" onclick="createDiv()">create</button>
+    <div id="custumDiv"></div>
+    <script>
+function createDiv(){
+     var a=document.getElementById("inp1").value
+     var b=document.getElementById("inp2").value
+     var c=document.getElementById("inp3").value
+     var d=document.getElementById("inp4").value
+     var e=document.getElementById("inp5").value
+     var f=document.getElementById("custumDiv").style
+     f.height = a + "px"
+     f.width=b +"px"
+    document.getElementById("custumDiv").innerHTML=c
+    f.color=d
+    f.backgroundColor=e
+}
+    </script>
+</body>
+</html>

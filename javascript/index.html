@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            border: 3px solid blue;
+        }
+
+        #img1 {
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" onmouseover="changeImg" style="height: 670px; width: 1200px; border: 1px solid black; margin: 0px auto">
+        <div class="img">
+            <img class="img1" id="img1" src="nyc.avif" height="200" width="200" alt="">
+        </div>
+        <div class="img-2-container" style="display: flex; justify-content: space-around; margin-top: 130px;">
+            <img src="rose.jpg" id="img2" onmouseover="changeImg1()" onmouseout="changeImg()" height="200" width="200" alt="">
+            <img src="rainbow.jpg" id="img3" onmouseover="changeImg2()" onmouseout="changeImg()" height="200" width="200">
+            <img src="lotus.jpg" id="img4" onmouseover="changeImg3()" onmouseout="changeImg()" height="200" width="200" alt="">
+        </div>
+    </div>
+    <script>
+        function changeImg() {
+            document.getElementById("img1").src = "nyc.avif"
+        }
+        function changeImg1() {
+            document.getElementById("img1").src = "rose.jpg"
+        }
+        function changeImg2() {
+            document.getElementById("img1").src = "rainbow.jpg"
+        }
+        function changeImg3() {
+            document.getElementById("img1").src = "lotus.jpg"
+        }
+    </script>
+</body>
+
+</html>
