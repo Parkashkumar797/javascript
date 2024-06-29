@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Amount:<input id="id1"><br>
+    <button id="btn" onclick="gstCalculate()">
+        calculate
+    </button><br>
+    <div id="gst">
+    </div>
+    <div id="gst1">
+
+    </div>
+    <div id="gst2">
+
+    </div>
+    <script>
+        function gstCalculate() {
+            var x = parseInt(document.getElementById("id1").value)
+            document.getElementById("gst").innerHTML = `Amount Entered ${x}`
+            var gst3 = (x * (18 / 100))
+
+            document.getElementById("gst1").innerHTML = 'gst: ' + gst3
+
+            var y = x + (x * 18 / 100)
+
+            document.getElementById("gst2").innerHTML = `<mark> total ${y}</mark>`
+        }
+    </script>
+
+</body>
+
+</html>

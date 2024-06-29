@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1 {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-top: 10px;
+        }
+        .c2 {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="">Enter any number</label>
+    <input id="in1" type="number">
+    <br>
+    <button id="btn1" onclick="makeDiv()">Create</button>
+    <div id="div1"></div>
+    <script>
+        function makeDiv() {
+            var a = parseInt(document.getElementById("in1").value)
+
+            if (a % 2 == 0) {
+                document.getElementById("div1").innerHTML = ""
+                for (var i = 0; i < a; i++) {
+                    document.getElementById("div1").innerHTML += "<div class='c1'></div>"
+                    // document.getElementById("c1").style.backgroundColor = "red"
+                    console.log(i)
+                }
+
+            }
+            else if (a % 2 != 0) {
+                document.getElementById("div1").innerHTML = ""
+                for (var i = 0; i < a; i++) {
+                    document.getElementById("div1").innerHTML += "<div class='c2'></div>"
+                    // document.getElementById("c1").style.backgroundColor = "yellow"
+                        //   document.getElementById("c1").style.backgroundColor = "blue"
+                }
+        }
+        else {
+            console.log("enter a valid number");
+        }
+    }
+    </script>
+</body>
+
+</html>
