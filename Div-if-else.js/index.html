@@ -23,7 +23,7 @@
 
 <body>
     <label for="">Enter any number</label>
-    <input id="in1" type="number">
+    <input id="in1" type="text">
     <br>
     <button id="btn1" onclick="makeDiv()">Create</button>
     <div id="div1"></div>
@@ -36,7 +36,6 @@
                 for (var i = 0; i < a; i++) {
                     document.getElementById("div1").innerHTML += "<div class='c1'></div>"
                     // document.getElementById("c1").style.backgroundColor = "red"
-                    console.log(i)
                 }
 
             }
@@ -47,9 +46,6 @@
                     // document.getElementById("c1").style.backgroundColor = "yellow"
                         //   document.getElementById("c1").style.backgroundColor = "blue"
                 }
-        }
-        else {
-            console.log("enter a valid number");
         }
     }
     </script>
